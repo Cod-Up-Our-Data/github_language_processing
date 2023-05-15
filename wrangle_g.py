@@ -111,7 +111,12 @@ def final_wrangle(df):
     train_test_split(X, y, 
                  test_size=0.2, 
                  random_state=1349)
-    
-    return X_train, X_test, y_train, y_test
+    X_train, X_validate = train_test_split(X_train,
+                                   train_size=0.7,
+                                   random_state=1349)
+    y_train, y_validate = train_test_split(y_train,
+                                   train_size=0.7,
+                                   random_state=1349)
+    return X_train, X_validate, X_test, y_train, y_validate, y_test
 
 
