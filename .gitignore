@@ -1,7 +1,7 @@
 env.py
-acquire_nlp.py
+#acquire_nlp.py
 play.ipynb
-test_project_sandbox.ipynb
+#test_project_sandbox.ipynb
 .DS_Store
 .ipynb_checkpoints/
 __pycache__
