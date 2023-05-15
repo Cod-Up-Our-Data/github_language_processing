@@ -105,18 +105,15 @@ def final_wrangle(df):
     df['lemmatized'] = df.tokenized.apply(lemmatize)
     df['stopped'] = df.lemmatized.apply(remove_stopwords)
     df =df.drop(columns=['cleaned','tokenized','lemmatized'])
-    X = df.stopped
-    y = df.language
-    X_train, X_test, y_train, y_test = \
-    train_test_split(X, y, 
-                 test_size=0.2, 
-                 random_state=1349)
-    X_train, X_validate = train_test_split(X_train,
+
+    train_validate, test = train_test_split(df,
+                                        random_state=1349,
+                                        train_size=0.8,
+                                       stratify=df.language)
+    train, validate = train_test_split(train_validate,
+                                   random_state=1349,
                                    train_size=0.7,
-                                   random_state=1349)
-    y_train, y_validate = train_test_split(y_train,
-                                   train_size=0.7,
-                                   random_state=1349)
-    return X_train, X_validate, X_test, y_train, y_validate, y_test
+                                  stratify=train_validate.language)
+    return train, validate, test
 
 
