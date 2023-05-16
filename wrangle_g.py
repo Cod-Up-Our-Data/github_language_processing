@@ -294,3 +294,8 @@ def prediction_csv():
     dtc.score(X_validate_bow, y_validate)
     pred_df = pd.DataFrame({'is_R':dtc_preds_test})
     pred_df.to_csv('pred_test_set.csv',index=False)
+    
+    print(f'Accuracy-Train {round(dtc.score(X_bow,y_train),4)}')
+    print(f'Accuracy-test {round(dtc.score(X_test_bow,y_test),4)}')
+    print(classification_report(y_train,dtc_preds))
+    print(classification_report(y_test,dtc.predict(X_test_bow)))
