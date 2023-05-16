@@ -37,9 +37,10 @@
 
 #### Findings, Recommendations, and Takeaways:
 
+
 - Term Frequency-Inverse Document Frequency metrics were generated to measure the relative impact of the appearance of each word in a README file, GIVEN the frequency of the word for the entire Corpus, and GIVEN the frequency of the word in each particular Document.  
 - Modeling was optimized for Accuracy as the (lack-of) penalty for false -'s and false +'s is equivalent in this case.
-- Decision Tree model performed with the least amount of overfitting and was selected for use with test data. 
+- Decision Tree model performed best with the least amount of overfitting and was selected for use with test data.  This model showed improvement over the baseline accuracy (57.4%), with a TEST_data accuracy level of 67.8%.
 - With a small training dataset (approx. 162 rows), the value of the work can be described as marginal.  Working with a larger Corpus with more rows would provide most models with sufficient data and lead to more refined predictions.  Additionally, the small-scale fluctuations inherent in a limited dataset will smooth-out over extended trials.
 - In the future, it is recommended to increase the size of the dataset, as well as spend more time with modeling by adjusting hyperparameters and checking the performance of additional algorithms.
 
