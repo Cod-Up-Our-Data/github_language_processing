@@ -1,3 +1,5 @@
+## Presentation Slideshow: https://docs.google.com/presentation/d/1n3lpqqD19QFO9YwdnG5WksnYBGubXKYgjVOcOVILz6w/edit#slide=id.g2448708e995_0_135
+
 # github_language_processing
 
 #### Welcome to this initial exploration of Github Data Science repository data from Github!  The primary purpose of this project is to make accurate mid-season predictions about which language (R or Python) was used in a DATA SCIENCE repository based upon the text elements present in the repository README. The data was compiled by filtering publicly available Git repos based upon the topic of DATA SCIENCE and the two languages: R or PYTHON.  The repos were then sorted by "MOST STARS" and thus, reflect the rankings on 14 May, 2023.  
