@@ -41,11 +41,11 @@
 - Modeling was optimized for Accuracy as the (lack-of) penalty for false -'s and false +'s is equivalent in this case.
 - Decision Tree model performed with the least amount of overfitting and was selected for use with test data. 
 - With a small training dataset (approx. 162 rows), the value of the work can be described as marginal.  Working with a larger Corpus with more rows would provide most models with sufficient data and lead to more refined predictions.  Additionally, the small-scale fluctuations inherent in a limited dataset will smooth-out over extended trials.
-- In the future, it is recommended to increase the size of the dataset, as well as spend more time with modeling by adjusting hyperparameters and checking the performnce of additional algorythms.
+- In the future, it is recommended to increase the size of the dataset, as well as spend more time with modeling by adjusting hyperparameters and checking the performance of additional algorithms.
 
 #### Applications:
 
-- For the purposes of determining the nature and categories of use for each of the traditional "first-languages" in the fild of Data Science, the end-user can utilize project exploration and model outputs to make an informed choice regarding which language to learn first.
+- For the purposes of determining the nature and categories of use for each of the traditional "first-languages" in the field of Data Science, the end-user can utilize project exploration and model outputs to make an informed choice regarding which language to learn first.
 - The value of the project will increase proportionally with the amount of data captured via exploration and modeling.
 
 #### Instructions for those who wish to reproduce this work or simply follow along:
