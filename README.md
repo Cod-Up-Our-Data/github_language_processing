@@ -10,16 +10,16 @@
 - Plan: Questions and Hypotheses
 - Acquire: Curated dataset from https://docs.github.com/en/search-github by searching Git repositories.  README text strings sorted by topic: data science and language: R or Python.
 - Prepare: All strings were transformed into lower-case, non-ASCII chars were removed.  Strings were tokenized and lemmatized.  English Stopwords and Custom Stopwords like "R" or "python" were removed. Split into ML subsets (Train/Validate/Test) with "language" as the defined target.
-- xxxxxxExplore: xxxUnivariate and multi-variate analysis, correlation matrix, 2D visualization, correlation significance testing, 2-sample T-testing for significant differences in means.
-- xxxxxxxModel: xxxEstablished a baseline "Precision" for Positive class of 57.1% using the most frequent target occurance of "yes: playoffs".  Then with a DecisionTreeClassifier with MaxDepth set to 4, established a new Precision floor of 86.0%. After creating models with different tree-based and non-tree-based algorithms and multiple tunings, findings indicated a Multi-Layer Perceptron with a three hidden layers (256,128,64 nodes) yielded best validation results (90.0% Precision on Test).
-- xxxxxxDeliver: xxxPlease refer to this doc as well as the Final_NBA.ipynb file for the finished version of the presentation, in addition to each of the underlying exploratory notebooks.
+- Explore: Created a feature measuring the token count of each README, explored value_counts of R_words/Python_words/All_words,isolated words exclusive to R or Python, compared ratios of occurance of mutual-words in each language, explored word groupings (bi-grams/tri-grams), explored statistical significance of difference in mean token counts for each language.
+- Model: (tf-idf --> Classification) Established a baseline "Accuracy" for Positive class of 57.4% using the most frequent target occurance of "language: Python".  Then with a DecisionTreeClassifier with MaxDepth set to 4, established a new Accuracy floor of 82.1%. After creating models with different tree-based and non-tree-based algorithms and multiple tunings, findings indicated the DecisionTreeClassifier with maxDepth=4 yielded best validation results without significant OVERFITTING (67.8% Accuracy on Test).  When Classifying rows based upon bigrams, the performance of the DecisionTreeClassifier fell to 62.7% Accuracy on Test, after initially showing similar results as with single-tokens
+- XXXXXXXXXXXDeliver: Please refer to this doc as well as the Final_XXXXXXXXXXXX.ipynb file for the finished version of the presentation, in addition to each of the underlying exploratory notebooks.
 
 #### Initial hypotheses and questions:
 * ?  
 * ?  
 * ? 
 * ?
-* ?
+* Will classifying samples based upon the tf-idf of Bigrams and various ngrams lead to an improvement in model performance?
 * ?
 
 #### Data Dictionary: 
