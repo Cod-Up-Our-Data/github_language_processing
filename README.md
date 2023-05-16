@@ -42,20 +42,20 @@
 
 #### Applications:
 
-- For the purposes of determining the nature and categories of use for each of the traditional "first-languages" in the fild of Data Science, the user can use project exploration and model outputs to make an informed choice regarding which language to learn first.
+- For the purposes of determining the nature and categories of use for each of the traditional "first-languages" in the fild of Data Science, the end-user can utilize project exploration and model outputs to make an informed choice regarding which language to learn first.
 - The value of the project will increase proportionally with the amount of data captured via exploration and modeling.
-- 
 
 #### Instructions for those who wish to reproduce this work or simply follow along:
 You Will Need (ALL files must be placed in THE SAME FOLDER!):
-- 1. final_nba_project.ipynb file from this git repo
-- 2. wranglerer.py file from this git repo
+- 1. final_XXXXXXX_project.ipynb file from this git repo
+- 2. wrangle_g.py file from this git repo
 - 3. modeling.py file from this git repo
-- 4. nba.csv from this git repo
+- 4. lang_data_prepped.csv from this git repo
+- 5. Environment: nltk.download('stopwords') required copy paste the following into cmd prompt: python -c "import nltk; nltk.download('stopwords')"
 
 Ensure:
 - All files are in the SAME FOLDER
-- wranglerer.py and modeling.py each have the .py extension in the file name
+- wrangle_g.py and modeling.py each have the .py extension in the file name
 
 Any further assistance required, please email me at myemail@somecompany.com.
 
