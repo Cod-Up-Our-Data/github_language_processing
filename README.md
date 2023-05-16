@@ -1,28 +1,29 @@
-## Presentation Slideshow: https://docs.google.com/presentation/d/1n3lpqqD19QFO9YwdnG5WksnYBGubXKYgjVOcOVILz6w/edit#slide=id.g2448708e995_0_135
+### Presentation Slideshow: 
+#### https://docs.google.com/presentation/d/1n3lpqqD19QFO9YwdnG5WksnYBGubXKYgjVOcOVILz6w/edit#slide=id.g2448708e995_0_135
 
 # github_language_processing
 
-#### Welcome to this initial exploration of Github Data Science repository data from Github!  The primary purpose of this project is to make accurate mid-season predictions about which language (R or Python) was used in a DATA SCIENCE repository based upon the text elements present in the repository README. The data was compiled by filtering publicly available Git repos based upon the topic of DATA SCIENCE and the two languages: R or PYTHON.  The repos were then sorted by "MOST STARS" and thus, reflect the rankings on 14 May, 2023.  
+#### Welcome to this initial exploration of Github Data Science repository data from Github!  The primary purpose of this project is to make accurate mid-season predictions about which language (R or Python) was used in a DATA SCIENCE repository based upon the text elements present in the repository README. The data was compiled by filtering publicly available Git repos based upon the topic of DATA SCIENCE and the two languages: R or PYTHON.  The repos were then sorted by "MOST STARS" and therefore, reflect the rankings on 14 May, 2023.  
 
 #### The goals of this initial exploration are as follows:
-- PRIMARY: Create a classification model which will predict which language is utilized in the repo based upon the README text.
-- SECONDARY: Potentially assist a beginner decide which Data Science language to learn first, based upon which repos correspond with the individual's domain experience/preferences and perceived level of seriousness.
+- PRIMARY: Create a classification model which will predict which language is utilized in the repo based upon contents of the README text.
+- SECONDARY: Potentially assist a beginner decide which Data Science language to learn first, based upon which repos correspond with the individual's domain experience/preferences.
 
 #### Project Planning:
 - Plan: Questions and Hypotheses
 - Acquire: Curated dataset from https://docs.github.com/en/search-github by searching Git repositories.  README text strings sorted by topic: data science and language: R or Python.
 - Prepare: All strings were transformed into lower-case, non-ASCII chars were removed.  Strings were tokenized and lemmatized.  English Stopwords and Custom Stopwords like "R" or "python" were removed. Split into ML subsets (Train/Validate/Test) with "language" as the defined target.
 - Explore: Created a feature measuring the token count of each README, explored value_counts of R_words/Python_words/All_words,isolated words exclusive to R or Python, compared ratios of occurance of mutual-words in each language, explored word groupings (bi-grams/tri-grams), explored statistical significance of difference in mean token counts for each language.
-- Model: (tf-idf --> Classification) Established a baseline "Accuracy" for Positive class of 57.4% using the most frequent target occurance of "language: Python".  Then with a DecisionTreeClassifier with MaxDepth set to 4, established a new Accuracy floor of 82.1%. After creating models with different tree-based and non-tree-based algorithms and multiple tunings, findings indicated the DecisionTreeClassifier with maxDepth=4 yielded best validation results without significant OVERFITTING (67.8% Accuracy on Test).  When Classifying rows based upon bigrams, the performance of the DecisionTreeClassifier fell to 62.7% Accuracy on Test, after initially showing similar results as with single-tokens
-- XXXXXXXXXXXDeliver: Please refer to this doc as well as the Final_XXXXXXXXXXXX.ipynb file for the finished version of the presentation, in addition to each of the underlying exploratory notebooks.
+- Model: (tf-idf --> Classification) Established a baseline "Accuracy" of 57.4% using the most frequent target occurance of "language: Python".  Then with a DecisionTreeClassifier with MaxDepth set to 4, established a new Accuracy floor of 82.1%. After creating models with different tree-based and non-tree-based algorithms and multiple tunings, findings indicated the DecisionTreeClassifier with maxDepth=4 yielded best validation results without significant OVERFITTING (67.8% Accuracy on Test).  When Classifying rows based upon bigrams, the performance of the DecisionTreeClassifier fell to 62.7% Accuracy on Test, after initially showing similar results to single-tokens.
+- XXXXXXXXXXXDeliver: Please refer to this doc, as well as the Final_XXXXXXXXXXXX.ipynb file for the finished version of the presentation, in addition to each of the underlying exploratory notebooks.  The presentation slideshow can be accessed via the link at the top of the page.
 
 #### Initial hypotheses and questions:
 * Which words exist with relative parity within the README files of both languages? 
 * Of these common words, are there any words which are highly representative of either language? 
 * Are there any words which exist specifically for R or Python README files?  If so, what is the predictive/inferential impact of these words?
-* Does the mean token_count of either language README file provide ny amplifying information? 
-* Does a statistically significant difference exist between the mean token count of each cleaned repo exist between the R and Python repos? 
-* Will classifying samples based upon the tf-idf of Bigrams and various ngrams lead to an improvement in model performance?
+* Does the mean token_count of either language README file provide any amplifying information? 
+* Does a statistically significant difference exist between the mean token count of each cleaned repo for each of the R and Python repos? 
+* Will the classification of samples based upon the tf-idf of Bigrams and various ngrams lead to an improvement in model performance?
 
 #### Data Dictionary: 
 
