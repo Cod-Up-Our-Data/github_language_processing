@@ -7,6 +7,7 @@ test_project_sandbox.ipynb
 __pycache__
 catboost_info
 *.csv
+*.mov
 *.xlsx
 *.xls
 *.xl
